@@ -30,6 +30,7 @@ import Hours from "../components/Hours";
 import PageLayout from "../components/PageLayout";
 import EditTool from "../components/EditTool";
 import BreadCrumbs from "../components/Breadcrumbs";
+import Button from "@mui/material/Button";
 
 /**
  * Required when Knowledge Graph data is used for a template.
@@ -103,32 +104,32 @@ export const getRedirects: GetRedirects<TemplateProps> = ({ document }) => {
  * will be used to generate the inner contents of the HTML document's <head> tag.
  * This can include the title, meta tags, script tags, etc.
  */
-export const getHeadConfig: GetHeadConfig<TemplateRenderProps> = ({
-  document,
-}): HeadConfig => {
-  return {
-    title: document.name,
-    charset: "UTF-8",
-    viewport: "width=device-width, initial-scale=1",
-    tags: [
-      {
-        type: "meta",
-        attributes: {
-          name: "description",
-          content: document.description,
-        },
-      },
-      {
-        type: "link",
-        attributes: {
-          rel: "icon",
-          type: "image/x-icon",
-          href: Favicon,
-        },
-      },
-    ],
-  };
-};
+// export const getHeadConfig: GetHeadConfig<TemplateRenderProps> = ({
+//   document,
+// }): HeadConfig => {
+//   return {
+//     title: document.name,
+//     charset: "UTF-8",
+//     viewport: "width=device-width, initial-scale=1",
+//     tags: [
+//       {
+//         type: "meta",
+//         attributes: {
+//           name: "description",
+//           content: document.description,
+//         },
+//       },
+//       {
+//         type: "link",
+//         attributes: {
+//           rel: "icon",
+//           type: "image/x-icon",
+//           href: Favicon,
+//         },
+//       },
+//     ],
+//   };
+// };
 
 /**
  * Required only when data needs to be retrieved from an external (non-Knowledge Graph) source.
@@ -175,6 +176,8 @@ const Location: Template<TemplateRenderProps> = ({
     dm_directoryParents,
   } = document;
 
+  const [count, setCount] = React.useState(0);
+
   return (
     <>
       <PageLayout>
@@ -189,6 +192,9 @@ const Location: Template<TemplateRenderProps> = ({
             {hours && <Hours title={"Restaurant Hours"} hours={hours} />}
             {description && <About name={name} description={description} />}
           </div>
+          <Button variant="outlined" color="error">Hello World</Button>
+          <button onClick={() => setCount(c => c + 1)}>Click Me</button>
+          {count}
         </div>
       </PageLayout>
       {/* This component displays a link to the entity that represents the given page in the Knowledge Graph*/}
