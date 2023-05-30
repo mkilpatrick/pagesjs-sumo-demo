@@ -1,6 +1,5 @@
 import * as React from "react";
 import { XMarkIcon } from "@heroicons/react/24/outline";
-import { useState } from "react";
 
 export interface EditToolProps {
   data: Record<string, any>;
@@ -8,7 +7,7 @@ export interface EditToolProps {
 
 const EditTool = ({ data }: EditToolProps) => {
   const { uid, businessId } = data;
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = React.useState(true);
 
   const editUrl =
     // change YEXT_PUBLIC_UNIVERSE to production in the .env file if you are using a production account

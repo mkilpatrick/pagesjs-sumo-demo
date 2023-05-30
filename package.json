@@ -15,7 +15,8 @@
     "fmt": "prettier -w .",
     "lint": "eslint .",
     "clean": "rm -rf .artifact-output .yext/ dist/ localData sites-rendered-output",
-    "generate-notices": "generate-license-file --input package.json --output ./THIRD-PARTY-NOTICES --overwrite"
+    "generate-notices": "generate-license-file --input package.json --output ./THIRD-PARTY-NOTICES --overwrite",
+    "ci": "pages generate ci"
   },
   "engines": {
     "node": ">=17"
@@ -35,12 +36,11 @@
     "@typescript-eslint/eslint-plugin": "^5.36.2",
     "@typescript-eslint/parser": "^5.36.2",
     "@vitejs/plugin-react": "^2.1.0",
-    "@yext/pages": "https://github.com/mkilpatrick/pagesjs-sumo-demo/raw/master/yext-pages-1.0.0-beta.21.tgz",
+    "@yext/pages": "https://github.com/mkilpatrick/pagesjs-sumo-demo/raw/master/yext-pages-1.0.0-beta.22-duval.tgz",
     "@mui/material": "^5.13.0",
     "@emotion/react": "^11.11.0",
     "@emotion/server": "^11.11.0",
     "@emotion/css": "^11.11.0",
-    "vite-plugin-node-polyfills": "^0.8.2",
     "autoprefixer": "^10.4.14",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-react": "^7.31.7",
