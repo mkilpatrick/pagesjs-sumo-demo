@@ -6,6 +6,7 @@ import { PageContext } from "@yext/pages";
 import { CacheProvider } from '@emotion/react'
 import createEmotionServer from '@emotion/server/create-instance'
 import {cache} from '@emotion/css';
+import Favicon from "../assets/images/yext-favicon.ico";
 
 export { render };
 
@@ -31,6 +32,7 @@ const render = async (pageContext: PageContext<any>) => {
     <html lang="${language}">
       <head>
         <title>${title}</title>
+        <link rel="icon" type="image/x-icon" href=${Favicon}>
         ${styles}
       </head>
       <body>

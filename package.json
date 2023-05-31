@@ -36,7 +36,7 @@
     "@typescript-eslint/eslint-plugin": "^5.36.2",
     "@typescript-eslint/parser": "^5.36.2",
     "@vitejs/plugin-react": "^2.1.0",
-    "@yext/pages": "https://github.com/mkilpatrick/pagesjs-sumo-demo/raw/master/yext-pages-1.0.0-beta.22-duval1.tgz",
+    "@yext/pages": "https://github.com/mkilpatrick/pagesjs-sumo-demo/raw/master/yext-pages-1.0.0-beta.22-duval2.tgz",
     "@mui/material": "^5.13.0",
     "@emotion/react": "^11.11.0",
     "@emotion/server": "^11.11.0",
